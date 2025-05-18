@@ -38,6 +38,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.draw.clip
 import com.example.athena.ui.theme.Purple80
 import com.example.athena.R
+import com.example.athena.ui.theme.Blood_red
 
 @Composable
 fun ChatPage(modifier: Modifier = Modifier, viewModel: ChatViewModel) {
@@ -91,7 +92,7 @@ fun MessageList(modifier: Modifier = Modifier, messageList: List<MessageModel>) 
                 modifier = modifier.size(60.dp),
                 painter = painterResource(R.drawable.baseline_all_inclusive_24),
                 contentDescription = "Icon",
-                tint = Purple80
+                tint = Blood_red
             )
             Text(
                 text = "Ask me anything",
@@ -173,7 +174,7 @@ fun MessageInput(onMessageSend: (String) -> Unit) {
 fun AppHeader() {
     Text(
         modifier = Modifier.padding(16.dp),
-        text = "Athena",
+        text = "",
         color = Color.Red,
         fontSize = 22.sp,
         fontStyle = FontStyle.Italic
